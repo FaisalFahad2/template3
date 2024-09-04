@@ -475,3 +475,42 @@ nav .menu-cont a {
   }
 }
 /* End Gallery */
+/* Start Features */
+.features {
+  padding: var(--main-padding-bottom) 0;
+  background-color: white;
+  position: relative;
+  .container {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    .box {
+      --box-color:rgb(244 64 54);
+      border: #ccc solid 1px;
+      text-align: center;
+      .image {
+        overflow: hidden;
+        position: relative;
+        img {
+        max-width: 100%;
+        }
+      }
+      h2 {
+        font-size: 40px;
+        width: fit-content;
+        position: relative;
+        margin: auto;
+        &::before {
+          content: '';
+          position: absolute;
+          width: 75%;
+          height: 5px;
+          bottom: -10px;
+          left: 10%;
+          background-color: var(--box-color);
+        }
+      }
+    }
+  }
+}
+/* End Features */
