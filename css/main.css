@@ -1249,15 +1249,15 @@ nav .menu-cont a {
 }
 /* End Stats */
 /* Start Discout */
-.discout {
+.discount {
   position: relative;
   display: flex;
+  min-height: 100vh;
   @media (max-width: 991px) {
     & {
       flex-direction: column;
     }
   }
-  min-height: 100vh;
   .image {
     background-image: url("https://elzerowebschool.github.io/HTML_And_CSS_Template_Three/imgs/discount-background1.jpg");
     flex-basis: 50%;
@@ -1309,39 +1309,38 @@ nav .menu-cont a {
         font-size: 40px;
         letter-spacing: -2px;
       }
-      form {
-        input:not(.btn),
-        textarea {
-          border: none;
-          border-bottom: solid 1px #ccc;
-          display: block;
-          background-color: #f9f9f9;
-          padding: 15px;
-          caret-color: var(--main-color);
-          margin-bottom: 25px;
-          width: 100%;
-          &:focus {
-            outline: none;
-          }
+      form,
+      input:not(.btn),
+      textarea {
+        border: none;
+        border-bottom: solid 1px #ccc;
+        display: block;
+        background-color: #f9f9f9;
+        padding: 15px;
+        caret-color: var(--main-color);
+        margin-bottom: 25px;
+        width: 100%;
+        &:focus {
+          outline: none;
         }
-        textarea {
-          height: 200px;
-          resize: none;
-        }
-        .btn {
-          background-color: var(--main-color);
-          width: 100%;
-          border: none;
-          padding: 15px;
-          color: white;
-          font-weight: bold;
-          cursor: pointer;
-          transition: var(--main-transition);
-          font-size: 20px;
-          display: block;
-          &:hover {
-            background-color: var(--main-color-alt);
-          }
+      }
+      textarea {
+        height: 200px;
+        resize: none;
+      }
+      .btn {
+        background-color: var(--main-color);
+        width: 100%;
+        border: none;
+        padding: 15px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: var(--main-transition);
+        font-size: 20px;
+        display: block;
+        &:hover {
+          background-color: var(--main-color-alt);
         }
       }
     }
