@@ -909,6 +909,11 @@ nav .menu-cont a {
     flex-wrap: wrap;
     > img {
       max-width: 450px;
+      @media (max-width: 991px) {
+        & {
+          display: none;
+        }
+      }
     }
     .info {
       flex: 1;
@@ -965,6 +970,16 @@ nav .menu-cont a {
         padding: 30px 40px;
         display: flex;
         gap: 10px;
+        @media (max-width: 768px) {
+          & {
+            flex-direction: column;
+            max-width: 100%;
+            border-radius: 0;
+            input {
+              border-radius: 0 !important;
+            }
+          }
+        }
         input[type="email"] {
           border-radius: 50px;
           border: none;
