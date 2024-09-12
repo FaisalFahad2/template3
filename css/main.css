@@ -1309,8 +1309,7 @@ nav .menu-cont a {
         font-size: 40px;
         letter-spacing: -2px;
       }
-      form,
-      input:not(.btn),
+      form input:not(.btn),
       textarea {
         border: none;
         border-bottom: solid 1px #ccc;
