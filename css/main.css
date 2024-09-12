@@ -122,22 +122,6 @@ ul {
     border-radius: 0;
   }
 }
-
-.dots {
-  position: absolute;
-  background: url(https://elzerowebschool.github.io/HTML_And_CSS_Template_Three/imgs/dots.png)
-    no-repeat;
-  width: 186px;
-  height: 204px;
-}
-.dots-up {
-  top: 200px;
-  right: 0;
-}
-.dots-down {
-  bottom: 200px;
-  left: 0;
-}
 /* End Global Ruls */
 /* Start Header */
 
@@ -1134,6 +1118,236 @@ nav .menu-cont a {
   }
 }
 /* End Pricing */
+/* Start Video */
+.video {
+  padding: var(--main-padding-bottom) 0;
+  position: relative;
+  background-color: white;
+  .holder {
+    display: flex;
+    justify-content: center;
+    border: #eee solid 1px;
+    @media (max-width: 768px) {
+      & {
+        flex-direction: column;
+      }
+    }
+    .list {
+      .name {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: #f4f4f4;
+        font-weight: bold;
+      }
+      ul {
+        min-width: 300px;
+        li {
+          padding: 20px;
+          border-top: var(--section-background) solid 1px;
+          transition: var(--main-transition);
+          cursor: pointer;
+          &:hover {
+            background-color: #fafafa;
+            color: var(--main-color);
+          }
+          span {
+            display: block;
+            color: #777;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+    .preview {
+      padding: 10px;
+      background-color: #e2e2e2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      img {
+        max-width: 100%;
+      }
+      .info {
+        background: white;
+        margin-top: 10px;
+        padding: 20px;
+      }
+    }
+  }
+}
+/* End Video */
+/* Start Stats */
+.stats {
+  position: relative;
+  padding: var(--main-padding-bottom) 0;
+  background-image: url(https://elzerowebschool.github.io/HTML_And_CSS_Template_Three/imgs/stats.jpg);
+  background-size: cover;
+  z-index: 0;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: -1;
+  }
+  h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 50px;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    .box {
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      padding: 30px 15px;
+      gap: 10px;
+      align-items: center;
+      position: relative;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: var(--main-color);
+        width: 2px;
+        transition: 1s;
+        height: 0;
+      }
+      &::before {
+        top: 0%;
+        left: 0;
+      }
+      &::after {
+        right: 0;
+        bottom: 0;
+      }
+      &:hover::before,
+      &:hover::after {
+        height: 100%;
+      }
+      .number {
+        font-size: 50px;
+        font-weight: bold;
+        font-style: italic;
+      }
+      .text {
+        font-size: 20px;
+        color: var(--main-color);
+        font-weight: bold;
+        font-style: italic;
+      }
+    }
+  }
+}
+/* End Stats */
+/* Start Discout */
+.discout {
+  position: relative;
+  display: flex;
+  @media (max-width: 991px) {
+    & {
+      flex-direction: column;
+    }
+  }
+  min-height: 100vh;
+  .image {
+    background-image: url("https://elzerowebschool.github.io/HTML_And_CSS_Template_Three/imgs/discount-background1.jpg");
+    flex-basis: 50%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgb(23 135 224 / 97%);
+    }
+    .content {
+      text-align: center;
+      padding: 0 20px;
+      h2 {
+        color: white;
+        font-size: 40px;
+        margin: 33px 0;
+        letter-spacing: -2px;
+      }
+      p {
+        max-width: 500px;
+        margin: auto;
+        color: white;
+        line-height: 1.6;
+        font-size: 18px;
+      }
+      img {
+        max-width: 100%;
+        width: 300px;
+      }
+    }
+  }
+  .form {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .content {
+      padding: 0 20px;
+      text-align: center;
+      h2 {
+        margin: 33px 0;
+        font-size: 40px;
+        letter-spacing: -2px;
+      }
+      form {
+        input:not(.btn),
+        textarea {
+          border: none;
+          border-bottom: solid 1px #ccc;
+          display: block;
+          background-color: #f9f9f9;
+          padding: 15px;
+          caret-color: var(--main-color);
+          margin-bottom: 25px;
+          width: 100%;
+          &:focus {
+            outline: none;
+          }
+        }
+        textarea {
+          height: 200px;
+          resize: none;
+        }
+        .btn {
+          background-color: var(--main-color);
+          width: 100%;
+          border: none;
+          padding: 15px;
+          color: white;
+          font-weight: bold;
+          cursor: pointer;
+          transition: var(--main-transition);
+          font-size: 20px;
+          display: block;
+          &:hover {
+            background-color: var(--main-color-alt);
+          }
+        }
+      }
+    }
+  }
+}
+/* End Discout */
 /* Start Footer */
 footer {
   padding-top: 70px;
@@ -1155,7 +1369,7 @@ footer {
         border: white solid 2px;
         margin: 2px;
       }
-      >p {
+      > p {
         color: #b9b9b9;
         line-height: 2;
         margin-top: 20px;
@@ -1201,23 +1415,23 @@ footer {
           }
         }
       }
-      >div {
+      > div {
         display: flex;
         gap: 10px;
         color: #b9b9b9;
         align-items: center;
         margin-bottom: 30px;
-        i{
+        i {
           color: var(--main-color);
           font-size: 25px;
         }
-        p { 
+        p {
           flex: 1;
           line-height: 1.7;
         }
       }
     }
-  } 
+  }
   p.copyright {
     color: white;
     text-align: center;
