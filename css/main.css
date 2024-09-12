@@ -1408,8 +1408,10 @@ footer {
             border-bottom: solid 1px #444;
           }
           &:hover {
-            color: white;
             padding-left: 10px;
+            a {
+              color: white;
+            }
           }
         }
         a {
